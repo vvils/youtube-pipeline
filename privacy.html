@@ -10,23 +10,23 @@
 <main>
   <p><a href="./">YouTube Pipeline</a></p>
   <h1>Privacy policy</h1>
-  <p class="lede">Effective 31 October 2026.</p>
+  <p class="lede">Effective 1 November 2026.</p>
 
   <p>YouTube Pipeline is a personal command-line tool. Its owner (GitHub user <a href="https://github.com/vvils">vvils</a>) uses it with their own YouTube channels. It is not offered to anyone else.</p>
 
   <h2>What it accesses</h2>
   <p>When the owner signs in with Google, the tool asks for three permissions:</p>
   <ul>
-    <li><strong>Upload videos</strong> (<code>youtube.upload</code>): to upload the owner's videos and thumbnails to the owner's channel.</li>
-    <li><strong>View the YouTube account</strong> (<code>youtube.readonly</code>): to read the channel's ID, name and handle, so a video always goes to the channel the owner meant, and to read a video's length.</li>
-    <li><strong>View YouTube Analytics reports</strong> (<code>yt-analytics.readonly</code>): to read views, watch time and audience retention for the owner's own videos.</li>
+    <li><strong>Manage the YouTube account</strong> (<code>youtube.force-ssl</code>): Google describes this permission as seeing, editing and permanently deleting the account's videos, ratings, comments and captions. The tool uses it to read the channel's ID, name and handle, so a video always goes to the channel the owner meant; to list the channel's latest uploads with their privacy, length and views; to upload videos and thumbnails; to edit an uploaded video's title, description and other details; and to change a video's privacy or schedule when it goes public. It never deletes anything, and never reads, writes or rates comments, ratings or captions.</li>
+    <li><strong>View YouTube Analytics reports</strong> (<code>yt-analytics.readonly</code>): to read, for the owner's own videos, views and engaged views, watch time and how much of each video was watched, counts of likes, shares, comments and subscribers gained, and audience retention (where viewers stopped watching). It reads the counts, not the comments themselves.</li>
+    <li><strong>View monetary YouTube Analytics reports</strong> (<code>yt-analytics-monetary.readonly</code>): to read estimated revenue for the owner's own videos, alongside the figures above.</li>
   </ul>
 
   <h2>How the data is used</h2>
-  <p>The data is used only to publish the owner's videos and to learn which parts of them viewers watched, so the next video is better. It is not sold, not shared with anyone, not used for advertising, and not used to train any model.</p>
+  <p>The data is used only to publish the owner's videos and to learn how they performed and where viewers stopped watching, so the next video is better. It is not sold, not shared with anyone, not used for advertising, and the owner does not use it to train any AI model.</p>
 
   <h2>Where it is stored</h2>
-  <p>Sign-in tokens and analytics files stay on the owner's computer. The tool has no server and no database, and it sends data nowhere except Google's own APIs. The owner may run the tool through an AI coding assistant on that computer, which reads the tool's output while working.</p>
+  <p>Sign-in tokens stay on the owner's computer. Each video's figures are saved with that video's production records, on the owner's computer and in the owner's private GitHub repository. The tool has no hosted server and no database of its own. The owner may run the tool through an AI coding assistant on that computer, which reads the tool's output while working, so that output passes through the assistant's provider. Beyond these, the tool sends data nowhere except Google's own APIs.</p>
 
   <h2>Removing access</h2>
   <p>Access can be withdrawn at any time from <a href="https://myaccount.google.com/permissions">Google Account: third-party connections</a>, which invalidates the stored tokens. The owner can also delete the token files on their computer.</p>
